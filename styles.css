@@ -112,9 +112,30 @@ form button {
     border-radius: 5px;
 }
 
+.photo-banner img {
+    width: 100%;
+    max-width: 1366px;
+    height: auto;
+}
+
+.about-company, .vision-mission {
+    padding: 50px 20px;
+}
+
 footer {
     text-align: center;
     padding: 20px;
     background-color: #333;
     color:color-mix(in hsl shorter hue, color percentage, color percentage)
+}
+
+@media (max-width: 600px) {
+    .message-us {
+        flex-direction: column;
+    }
+
+    .form, .user-info {
+        margin: 0;
+        margin-bottom: 20px;
+    }
 }
