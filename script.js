@@ -1,19 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
     const userInfo = document.querySelector(".user-info");
+    const userName = prompt("Please enter your name:");
+    document.getElementById("user-name").textContent = userName;
 
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Mencegah form dari pengiriman default
 
         const name = document.getElementById("name").value;
-        const dob = document.getElementById("dob").value;
-        const gender = document.querySelector('input[name="gender"]:checked').value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
         const message = document.getElementById("message").value;
 
         const userContent = `
             <p>Nama: ${name}</p>
-            <p>Tanggal Lahir: ${dob}</p>
-            <p>Jenis Kelamin: ${gender === "male" ? "Laki-Laki" : "Perempuan"}</p>
+            <p>Email: ${email}</p>
+            <p>Nomor Telepon: ${phone}</p>
             <p>Pesan: ${message}</p>
         `;
 
